@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Moderna - Bootstrap 3 flat corporate template</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://bootstraptaste.com" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet" />
+	<meta charset="utf-8">
+	<title>Moderna - Bootstrap 3 flat corporate template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="http://bootstraptaste.com" />
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/jcarousel.css" rel="stylesheet" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
 
 
-<!-- Theme skin -->
-<link href="skins/default.css" rel="stylesheet" />
+	<!-- Theme skin -->
+	<link href="skins/default.css" rel="stylesheet" />
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
 	<script src="js/fragility.js"></script>
 </head>
@@ -38,17 +38,17 @@
 	</header>
 	<!-- end header -->
 	<section class="callaction">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="big-cta">
-					<div class="cta-text">
-						<h2><span>PPSUS</span> Diagnóstico e Monitoramento de Níveis de Fragilidade</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="big-cta">
+						<div class="cta-text">
+							<h2><span>PPSUS</span> Diagnóstico e Monitoramento de Níveis de Fragilidade</h2>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</section>
 	<section>
 		<div class="container">
@@ -61,56 +61,56 @@
 						<div class="row">
 							<div class="col-lg-12 field">
 								<p><strong>Q1. </strong>Nos últimos 12 meses (último ano) o(a) Sr(a) acha que perdeu peso sem fazer nenhuma dieta?</p>
-								<input type="radio" name="Q1" id="C23a_s" value="1" onclick="validate_c23a()"/> Sim
-								<input type="radio" name="Q1" id="C23a_n" value="2"/> Não
-								<input type="radio" name="Q1" id="C23a_ns" value="98"/> Não sabe
-								<input type="radio" name="Q1" id="C23a_nr" value="99"/> Não respondeu
+								<input type="radio" name="Q1" id="C23a_s" value="0" onclick="validate_c23a()"/> Sim
+								<input type="radio" name="Q1" id="C23a_n" value="0" onclick="refresh_c23a()"/> Não
+								<input type="radio" name="Q1" id="C23a_ns" value="0" onclick="refresh_c23a()"/> Não sabe
+								<input type="radio" name="Q1" id="C23a_nr" value="0" onclick="refresh_c23a()"/> Não respondeu
 								<hr>
 							</div>
 							<span id="opt"></span>
 							<div class="col-lg-12 field">
 								<p><strong>Q2. </strong>O(a) Sr(a) acha que faz menos atividades físicas do que há 12 meses atrás (há um ano)?</p>
 								<input type="radio" name="Q2" id="C29_s" value="1"/> Sim
-								<input type="radio" name="Q2" id="C29_n" value="2"/> Não
-								<input type="radio" name="Q2" id="C29_ns" value="98"/> Não sabe
-								<input type="radio" name="Q2" id="C29_nr" value="99"/> Não respondeu
+								<input type="radio" name="Q2" id="C29_n" value="0"/> Não
+								<input type="radio" name="Q2" id="C29_ns" value="0"/> Não sabe
+								<input type="radio" name="Q2" id="C29_nr" value="0"/> Não respondeu
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q3. </strong>Nos últimos 12 meses (último ano), o(a) Sr(a) acha que sua força diminuiu?</p>
-								<input type="radio" name="Q3" id="I1_s" value="0"/> Sim
-								<input type="radio" name="Q3" id="I1_n" value="1"/> Não
-								<input type="radio" name="Q3" id="I1_ns" value="98"/> Não sabe
-								<input type="radio" name="Q3" id="I1_nr" value="99"/> Não respondeu
+								<input type="radio" name="Q3" id="I1_s" value="1"/> Sim
+								<input type="radio" name="Q3" id="I1_n" value="0"/> Não
+								<input type="radio" name="Q3" id="I1_ns" value="0"/> Não sabe
+								<input type="radio" name="Q3" id="I1_nr" value="0"/> Não respondeu
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q4. </strong>O(a) Sr(a) acha que hoje está caminhando mais devagar do que caminhava há 12 meses atrás (um ano)?</p>
-								<input type="radio" name="Q4" id="I9_s" value="0"/> Sim
-								<input type="radio" name="Q4" id="I9_n" value="1"/> Não
-								<input type="radio" name="Q4" id="I9_ns" value="98"/> Não sabe
-								<input type="radio" name="Q4" id="I9_nr" value="99"/> Não respondeu
+								<input type="radio" name="Q4" id="I9_s" value="1"/> Sim
+								<input type="radio" name="Q4" id="I9_n" value="0"/> Não
+								<input type="radio" name="Q4" id="I9_ns" value="0"/> Não sabe
+								<input type="radio" name="Q4" id="I9_nr" value="0"/> Não respondeu
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q5. </strong>O(a) Sr(a) sentiu que teve que fazer algum esforço para dar conta de suas taredas do dia-a-dia?</p>
 								<input type="radio" name="Q5" id="C14p_nr" value="0"/> Nunca ou Raramente
 								<input type="radio" name="Q5" id="C14p_av" value="1"/> Às vezes
-								<input type="radio" name="Q5" id="C14p_fr" value="2"/> Frequentemente
-								<input type="radio" name="Q5" id="C14p_sp" value="3"/> Sempre
+								<input type="radio" name="Q5" id="C14p_fr" value="1"/> Frequentemente
+								<input type="radio" name="Q5" id="C14p_sp" value="1"/> Sempre
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q6. </strong>O(a) Sr(a) sentiu que não conseguiria levar adiante as suas tarefas?</p>
 								<input type="radio" name="Q6" id="C14q_nr" value="0"/> Nunca ou Raramente
 								<input type="radio" name="Q6" id="C14q_av" value="1"/> Às vezes
-								<input type="radio" name="Q6" id="C14q_fr" value="2"/> Frequentemente
-								<input type="radio" name="Q6" id="C14q_sp" value="3"/> Sempre
+								<input type="radio" name="Q6" id="C14q_fr" value="1"/> Frequentemente
+								<input type="radio" name="Q6" id="C14q_sp" value="1"/> Sempre
 								<hr>
-							</divq
+							</div>
 							<div class="col-lg-12 margintop10 field">
 								<p>
-									<button class="btn btn-theme margintop10 pull-left" type="calculate">Calcular Fragilidade</button>
+									<button class="btn btn-theme margintop10 pull-left"  onclick="fragilityCalculator()">Calcular Fragilidade</button>
 									<span class="pull-right margintop20">* Por favor, preencha todos os campos!</span>
 								</p>
 							</div>
@@ -122,21 +122,21 @@
 	</section>
 	<footer>
 
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<ul class="social-network">
-						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</footer>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
