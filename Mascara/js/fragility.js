@@ -1,7 +1,7 @@
 function validate_c23a() {
     document.getElementById("opt").innerHTML = '<div class="col-lg-12 field">\r\n' +
         '<p><strong>Q1a. </strong>Quantos quilos aproximadamente?</p>\r\n' +
-        '<input type="float" name="Q1a" id="C23b" value=""/>\r\n' +
+        '<input type="float" name="Q1a" id="C23b" value="" required/>\r\n' +
         '<hr>\r\n' +
         '</div>\r\n';
 }
@@ -10,9 +10,57 @@ function refresh_c23a() {
     document.getElementById("opt").innerHTML = '';
 }
 
+function validateRadio(quest) {
+    var result = 0;
+    for(var i = 0; i < quest.length; i++) {
+        if(quest.checked)
+            result++;
+    }
+    return result;
+}
+function formValidation() {
+    var Q1 = document.getElementsByName('Q1');
+    var Q2 = document.getElementsByName('Q2');
+    var Q3 = document.getElementsByName('Q3');
+    var Q4 = document.getElementsByName('Q4');
+    var Q5 = document.getElementsByName('Q5');
+    var Q6 = document.getElementsByName('Q6');
+    var error = 0;
+    error += Number(validateRadio(Q1));
+    error += Number(validateRadio(Q2));
+    error += Number(validateRadio(Q3));
+    error += Number(validateRadio(Q4));
+    error += Number(validateRadio(Q5));
+    error += Number(validateRadio(Q6));
+
+    if(error != 0)
+        window.alert('Por favor preencha todos os campos!');
+    else
+        fragilityCalculator();
+
+    /*var Q;
+    Q[0] = document.getElementsByName('Q1');
+    Q[1] = document.getElementsByName('Q2');
+    Q[2] = document.getElementsByName('Q3');
+    Q[3] = document.getElementsByName('Q4');
+    Q[4] = document.getElementsByName('Q5');
+    Q[5] = document.getElementsByName('Q6');
+    var check;
+
+    for (var i = 0; i < 6; i++) {
+        check = 0;
+        for(var j = 0; j < Q[i].length; j++) {
+            if(Q[i][j].checked)
+                check++;
+        }
+        if(check == 0)
+            window.alert('Por favor preencha todos os campos!');
+    }
+    fragilityCalculator();*/
+}
+
 function fragilityCalculator() {
     var result = 0;
-    var frag;
     var Q1 = document.getElementsByName('Q1');
     var Q2 = document.getElementsByName('Q2');
     var Q3 = document.getElementsByName('Q3');
@@ -46,10 +94,65 @@ function fragilityCalculator() {
     }
 
     if(result == 0)
-        frag = 'Não frágil';
-    else if(result == 1 || result == 2)
-        frag = 'Pré-frágil';
-    else frag = 'Frágil';
+        document.getElementById('result').innerHTML = '<div class="alert-success">Idoso <strong> Não frágil.</strong></div>';
+    else if(result == 1 || result == 2) {
+        document.getElementById('result').innerHTML = '<div class="alert-warning">Idoso <strong> Pré-frágil.</strong></div>\r\n' +
+            '<h4> Score de Testes </h4>\r\n' +
+            '<ol>\r\n' +
+            '<li>MOS</li>\r\n' +
+            '<li>Caminhada</li>\r\n' +
+            '<li>Circunferência cintura</li>\r\n' +
+            '<li>Idade</li>\r\n' +
+            '<li>MAN</li>\r\n' +
+            '<li>Circunferência panturrilha</li>\r\n' +
+            '<li>BERG</li>\r\n' +
+            '<li>Fraqueza muscular</li>\r\n' +
+            '<li>Tempo sentado</li>\r\n' +
+            '<li>Atividade física total</li>\r\n' +
+            '<li>Circunferência quadril</li>\r\n' +
+            '<li>Circunferência braço</li>\r\n' +
+            '<li>GDS</li>\r\n' +
+            '<li>FES</li>\r\n' +
+            '<li>Findrisc</li>\r\n' +
+            '<li>KATZ</li>\r\n' +
+            '<li>Relógio</li>\r\n' +
+            '<li>Lawton</li>\r\n' +
+            '<li>TUG</li>\r\n' +
+            '<li>CAAVD</li>\r\n' +
+            '<li>MEEM</li>\r\n' +
+            '<li>Quedas</li>\r\n' +
+            '<li>SCORED</li>\r\n' +
+            '</ol>';
 
-    window.alert(frag);
+    } else {
+        document.getElementById('result').innerHTML = '<div class="alert-danger">Idoso <strong> Frágil.</strong></div>\r\n' +
+            '<h4> Score de Testes </h4>\r\n' +
+            '<ol>\r\n' +
+            '<li>MOS</li>\r\n' +
+            '<li>Caminhada</li>\r\n' +
+            '<li>Circunferência panturrilha</li>\r\n' +
+            '<li>BERG</li>\r\n' +
+            '<li>GDS</li>\r\n' +
+            '<li>Tempo sentado</li>\r\n' +
+            '<li>Atividade física total</li>\r\n' +
+            '<li>MAN</li>\r\n' +
+            '<li>Idade</li>\r\n' +
+            '<li>Relógio</li>\r\n' +
+            '<li>Circunferência braço</li>\r\n' +
+            '<li>Circunferência cintura</li>\r\n' +
+            '<li>Circunferência quadril</li>\r\n' +
+            '<li>FES</li>\r\n' +
+            '<li>Fraqueza muscular</li>\r\n' +
+            '<li>Findrisc</li>\r\n' +
+            '<li>Lawton</li>\r\n' +
+            '<li>Quedas</li>\r\n' +
+            '<li>TUG</li>\r\n' +
+            '<li>CAAVD</li>\r\n' +
+            '<li>KATZ</li>\r\n' +
+            '<li>SCORED</li>\r\n' +
+            '<li>MEEM</li>\r\n' +
+            '</ol>';
+    }
+
+
 }
