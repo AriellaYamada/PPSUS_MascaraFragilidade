@@ -10,10 +10,14 @@ function refresh_c23a() {
     document.getElementById("opt").innerHTML = '';
 }
 
+function refresh() {
+
+}
+
 function validateRadio(quest) {
     var result = 0;
     for(var i = 0; i < quest.length; i++) {
-        if(quest.checked)
+        if(quest[i].checked)
             result++;
     }
     return result;
@@ -33,30 +37,15 @@ function formValidation() {
     error += Number(validateRadio(Q5));
     error += Number(validateRadio(Q6));
 
-    if(error != 0)
+    if(Q1[0].checked)
+        if(document.getElementById("C23b").value == "") {
+            window.alert('Por favor preencha o campo Q1a.');
+            exit();
+        }
+    if(error < 6)
         window.alert('Por favor preencha todos os campos!');
     else
         fragilityCalculator();
-
-    /*var Q;
-    Q[0] = document.getElementsByName('Q1');
-    Q[1] = document.getElementsByName('Q2');
-    Q[2] = document.getElementsByName('Q3');
-    Q[3] = document.getElementsByName('Q4');
-    Q[4] = document.getElementsByName('Q5');
-    Q[5] = document.getElementsByName('Q6');
-    var check;
-
-    for (var i = 0; i < 6; i++) {
-        check = 0;
-        for(var j = 0; j < Q[i].length; j++) {
-            if(Q[i][j].checked)
-                check++;
-        }
-        if(check == 0)
-            window.alert('Por favor preencha todos os campos!');
-    }
-    fragilityCalculator();*/
 }
 
 function fragilityCalculator() {
@@ -123,7 +112,6 @@ function fragilityCalculator() {
             '<li>Quedas</li>\r\n' +
             '<li>SCORED</li>\r\n' +
             '</ol>';
-
     } else {
         document.getElementById('result').innerHTML = '<div class="alert-danger">Idoso <strong> Frágil.</strong></div>\r\n' +
             '<h4> Score de Testes </h4>\r\n' +
@@ -153,6 +141,4 @@ function fragilityCalculator() {
             '<li>MEEM</li>\r\n' +
             '</ol>';
     }
-
-
 }
