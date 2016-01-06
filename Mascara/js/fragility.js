@@ -73,14 +73,18 @@ function fragilityCalculator() {
         if(Q4[i].checked)
             result += Number(Q4[i].value);
     }
+    var result5 = 0;
     for(var i = 0; i < Q5.length; i++) {
         if(Q5[i].checked)
-            result += Number(Q5[i].value);
+            result5 += Number(Q5[i].value);
     }
+    var result6 = 0;
     for(var i = 0; i < Q6.length; i++) {
         if(Q6[i].checked)
-            result += Number(Q6[i].value);
+            result6 += Number(Q6[i].value);
     }
+    if(result5 || result6)
+        result ++;
 
     if(result == 0)
         document.getElementById('result').innerHTML = '<div class="alert-success">Idoso <strong> Não frágil.</strong></div>';
