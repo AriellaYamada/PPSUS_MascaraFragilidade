@@ -23,6 +23,8 @@ function validateRadio(quest) {
     return result;
 }
 function formValidation() {
+    var nome = document.getElementById('nome');
+    var cpf = document.getElementById('cpf');
     var Q1 = document.getElementsByName('Q1');
     var Q2 = document.getElementsByName('Q2');
     var Q3 = document.getElementsByName('Q3');
@@ -37,6 +39,8 @@ function formValidation() {
     error += Number(validateRadio(Q5));
     error += Number(validateRadio(Q6));
 
+    if(nome.value() == '')
+        window.alert('Por favor preencha o nome');
     if(Q1[0].checked)
         if(document.getElementById("C23b").value == "") {
             window.alert('Por favor preencha o campo Q1a.');

@@ -56,55 +56,65 @@
 					<br>
 					<p><h4>Questionário de avaliação de nível fragilidade</h4></p>
 					<hr>
-					<form id="fragilityform" method="post" class="calculateform" name="calculate-fragility">
+					<div id="fragilityform" method="post" class="calculateform" name="calculate-fragility">
 						<div class="row">
 							<div class="col-lg-12 field">
+								<p><strong>Nome:</strong></p>
+								<input type="text" name="Nome" id="nome"/>
+							</div>
+							<div class="col-lg-12" field>
+								<p><strong>CPF:</strong></p>
+								<input type="text" name="Cpf" id="cpf"/>
+								<hr>
+							</div>
+							<div class="col-lg-12 field">
 								<p><strong>Q1. </strong>Nos últimos 12 meses (último ano) o(a) Sr(a) acha que perdeu peso sem fazer nenhuma dieta?</p>
-								<input type="radio" name="Q1" id="C23a_s" value="0" onclick="validate_c23a()"/> Sim
-								<input type="radio" name="Q1" id="C23a_n" value="0" onclick="refresh_c23a()"/> Não
-								<input type="radio" name="Q1" id="C23a_ns" value="0" onclick="refresh_c23a()"/> Não sabe
-								<input type="radio" name="Q1" id="C23a_nr" value="0" onclick="refresh_c23a()"/> Não respondeu
+								<div class="line"><input type="radio" name="Q1" id="C23a_s" value="0" onclick="validate_c23a()"/> Sim </div>
+								<div class="line"><input type="radio" name="Q1" id="C23a_n" value="0" onclick="refresh_c23a()"/> Não</div>
+								<div class="line"><input type="radio" name="Q1" id="C23a_ns" value="0" onclick="refresh_c23a()"/> Não sabe</div>
+								<div class="line"><input type="radio" name="Q1" id="C23a_nr" value="0" onclick="refresh_c23a()"/> Não respondeu</div>
 								<hr>
 							</div>
 							<span id="opt"></span>
 							<div class="col-lg-12 field">
-								<p><strong>Q2. </strong>O(a) Sr(a) acha que faz menos atividades físicas do que há 12 meses atrás (há um ano)?</p>
-								<input type="radio" name="Q2" id="C29_s" value="1"/> Sim
-								<input type="radio" name="Q2" id="C29_n" value="0"/> Não
-								<input type="radio" name="Q2" id="C29_ns" value="0"/> Não sabe
-								<input type="radio" name="Q2" id="C29_nr" value="0"/> Não respondeu
+								<p><strong>Q2. </strong>
+	O(a) Sr(a) acha que faz menos atividades físicas do que há 12 meses atrás (há um ano)?</p>
+								<div class="line"><input type="radio" name="Q2" id="C29_s" value="1"/> Sim</div>
+								<div class="line"><input type="radio" name="Q2" id="C29_n" value="0"/> Não</div>
+								<div class="line"><input type="radio" name="Q2" id="C29_ns" value="0"/> Não sabe</div>
+								<div class="line"><input type="radio" name="Q2" id="C29_nr" value="0"/> Não respondeu</div>
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q3. </strong>Nos últimos 12 meses (último ano), o(a) Sr(a) acha que sua força diminuiu?</p>
-								<input type="radio" name="Q3" id="I1_s" value="1"/> Sim
-								<input type="radio" name="Q3" id="I1_n" value="0"/> Não
-								<input type="radio" name="Q3" id="I1_ns" value="0"/> Não sabe
-								<input type="radio" name="Q3" id="I1_nr" value="0"/> Não respondeu
+								<div class="line"><input type="radio" name="Q3" id="I1_s" value="1"/> Sim</div>
+								<div class="line"><input type="radio" name="Q3" id="I1_n" value="0"/> Não</div>
+								<div class="line"><input type="radio" name="Q3" id="I1_ns" value="0"/> Não sabe</div>
+								<div class="line"><input type="radio" name="Q3" id="I1_nr" value="0"/> Não respondeu</div>
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q4. </strong>O(a) Sr(a) acha que hoje está caminhando mais devagar do que caminhava há 12 meses atrás (um ano)?</p>
-								<input type="radio" name="Q4" id="I9_s" value="1"/> Sim
-								<input type="radio" name="Q4" id="I9_n" value="0"/> Não
-								<input type="radio" name="Q4" id="I9_ns" value="0"/> Não sabe
-								<input type="radio" name="Q4" id="I9_nr" value="0"/> Não respondeu
+								<div class="line"><input type="radio" name="Q4" id="I9_s" value="1"/> Sim</div>
+								<div class="line"><input type="radio" name="Q4" id="I9_n" value="0"/> Não</div>
+								<div class="line"><input type="radio" name="Q4" id="I9_ns" value="0"/> Não sabe</div>
+								<div class="line"><input type="radio" name="Q4" id="I9_nr" value="0"/> Não respondeu</div>
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q5. </strong>O(a) Sr(a) sentiu que teve que fazer algum esforço para dar conta de suas taredas do dia-a-dia?</p>
-								<input type="radio" name="Q5" id="C14p_nr" value="0"/> Nunca ou Raramente
-								<input type="radio" name="Q5" id="C14p_av" value="1"/> Às vezes
-								<input type="radio" name="Q5" id="C14p_fr" value="1"/> Frequentemente
-								<input type="radio" name="Q5" id="C14p_sp" value="1"/> Sempre
+								<div class="line"><input type="radio" name="Q5" id="C14p_nr" value="0"/> Nunca ou Raramente</div>
+								<div class="line"><input type="radio" name="Q5" id="C14p_av" value="1"/> Às vezes</div>
+								<div class="line"><input type="radio" name="Q5" id="C14p_fr" value="1"/> Frequentemente</div>
+								<div class="line"><input type="radio" name="Q5" id="C14p_sp" value="1"/> Sempre</div>
 								<hr>
 							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q6. </strong>O(a) Sr(a) sentiu que não conseguiria levar adiante as suas tarefas?</p>
-								<input type="radio" name="Q6" id="C14q_nr" value="0"/> Nunca ou Raramente
-								<input type="radio" name="Q6" id="C14q_av" value="1"/> Às vezes
-								<input type="radio" name="Q6" id="C14q_fr" value="1"/> Frequentemente
-								<input type="radio" name="Q6" id="C14q_sp" value="1"/> Sempre
+								<div class="line"><input type="radio" name="Q6" id="C14q_nr" value="0"/> Nunca ou Raramente</div>
+								<div class="line"><input type="radio" name="Q6" id="C14q_av" value="1"/> Às vezes</div>
+								<div class="line"><input type="radio" name="Q6" id="C14q_fr" value="1"/> Frequentemente</div>
+								<div class="line"><input type="radio" name="Q6" id="C14q_sp" value="1"/> Sempre</div>
 								<hr>
 							</div>
 							<div class="col-lg-12 margintop10 field">

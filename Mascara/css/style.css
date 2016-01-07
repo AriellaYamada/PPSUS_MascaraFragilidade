@@ -1974,3 +1974,12 @@ article img.pull-right, article .align-right{
 @media (max-width: 360px) {
 
 }
+
+p{
+	font-size: large;
+	color: black;
+}
+
+input{
+	margin-bottom: 1%;
+}
