@@ -39,7 +39,7 @@ function formValidation() {
     error += Number(validateRadio(Q5));
     error += Number(validateRadio(Q6));
 
-    if(nome.value() == '')
+    if(nome.value == '')
         window.alert('Por favor preencha o nome');
     if(Q1[0].checked)
         if(document.getElementById("C23b").value == "") {
