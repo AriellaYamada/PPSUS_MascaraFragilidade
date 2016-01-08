@@ -24,7 +24,6 @@ function validateRadio(quest) {
 }
 function formValidation() {
     var nome = document.getElementById('nome');
-    var cpf = document.getElementById('cpf');
     var Q1 = document.getElementsByName('Q1');
     var Q2 = document.getElementsByName('Q2');
     var Q3 = document.getElementsByName('Q3');
@@ -39,7 +38,7 @@ function formValidation() {
     error += Number(validateRadio(Q5));
     error += Number(validateRadio(Q6));
 
-    if(nome.value == '')
+    if(nome.value == '' || nome.value == ' ')
         window.alert('Por favor preencha o nome');
     if(Q1[0].checked)
         if(document.getElementById("C23b").value == "") {
@@ -55,12 +54,17 @@ function formValidation() {
 
 function fragilityCalculator() {
     var result = 0;
+    var nome = document.getElementById('nome');
+    var cpf = document.getElementById('cpf');
     var Q1 = document.getElementsByName('Q1');
     var Q2 = document.getElementsByName('Q2');
     var Q3 = document.getElementsByName('Q3');
     var Q4 = document.getElementsByName('Q4');
     var Q5 = document.getElementsByName('Q5');
     var Q6 = document.getElementsByName('Q6');
+
+    document.getElementById('result_nome').innerHTML = nome.value;
+    document.getElementById('result_cpf').innerHTML = cpf.value;
 
     if(Q1[0].checked) {
         if(document.getElementById('C23b').value >= 3)
