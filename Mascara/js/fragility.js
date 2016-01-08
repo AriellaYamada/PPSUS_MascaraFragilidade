@@ -48,8 +48,9 @@ function formValidation() {
         }
     if(error < 6)
         window.alert('Por favor preencha todos os campos!');
-    else
+    else {
         fragilityCalculator();
+    }
 }
 
 function fragilityCalculator() {
@@ -90,8 +91,9 @@ function fragilityCalculator() {
     if(result5 || result6)
         result ++;
 
-    if(result == 0)
+    if(result == 0) {
         document.getElementById('result').innerHTML = '<div class="alert-success">Idoso <strong> Não frágil.</strong></div>';
+    }
     else if(result == 1 || result == 2) {
         document.getElementById('result').innerHTML = '<div class="alert-warning">Idoso <strong> Pré-frágil.</strong></div>\r\n' +
             '<h4> Score de Testes </h4>\r\n' +

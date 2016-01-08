@@ -119,13 +119,12 @@
 							</div>
 							<div class="col-lg-12 margintop10 field">
 								<p>
-									<href class="btn btn-theme margintop10 pull-left"  onclick="formValidation()">Calcular Fragilidade</href>
+									<href class="btn btn-theme margintop10 pull-left" data-toggle="modal" data-target="#Resultados" onclick="formValidation()">Calcular Fragilidade</href>
 									<span class="pull-right margintop20">* Por favor, preencha todos os campos!</span>
 								</p>
 							</div>
 						</div>
 					</form>
-					<span id="result"></span>
 				</div>
 			</div>
 		</div>
@@ -141,6 +140,23 @@
 			</div>
 		</div>
 	</footer>
+</div>
+<!-- Modal de Respostas -->
+<div class="modal fade" id="Resultados" tabindex="-1" role="dialog" aria-labelledby="Fragilidade">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title" id="myModalLabel">Resultados</h2>
+			</div>
+			<div class="modal-body">
+				<span id="result"></span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Retornar ao questionário</button>
+			</div>
+		</div>
+	</div>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
