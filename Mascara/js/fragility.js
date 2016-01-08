@@ -39,14 +39,13 @@ function formValidation() {
     error += Number(validateRadio(Q6));
 
     if(nome.value == '' || nome.value == ' ')
-        window.alert('Por favor preencha o nome');
-    if(Q1[0].checked)
-        if(document.getElementById("C23b").value == "") {
-            window.alert('Por favor preencha o campo Q1a.');
-            exit();
-        }
-    if(error < 6)
-        window.alert('Por favor preencha todos os campos!');
+        document.getElementById('warning').innerHTML = '<h4>Por favor preencha o nome.</h4>';
+    else if(Q1[0].checked && document.getElementById("C23b").value == ""){
+        document.getElementById('warning').innerHTML = '<h4>Por favor preencha o campo Q1a.</h4>';
+        exit();
+    }
+    else if(error < 6)
+        document.getElementById('warning').innerHTML = '<h4>Por favor preencha todos os campos!</h4>';
     else {
         fragilityCalculator();
     }
@@ -63,6 +62,9 @@ function fragilityCalculator() {
     var Q5 = document.getElementsByName('Q5');
     var Q6 = document.getElementsByName('Q6');
 
+    document.getElementById('identification').innerHTML = '<h4>Nome: </h4><p id="result_nome"></p>\r\n' +
+        '<h4>CPF: </h4><p id="result_cpf"></p>\r\n' +
+        '<hr>';
     document.getElementById('result_nome').innerHTML = nome.value;
     document.getElementById('result_cpf').innerHTML = cpf.value;
 
