@@ -20,8 +20,6 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<script src="js/fragility.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -56,7 +54,7 @@
 					<br>
 					<p><h3>Questionário de avaliação de nível fragilidade</h3></p>
 					<hr>
-					<div id="fragilityform" method="post" class="calculateform" name="calculate-fragility">
+					<form id="fragilityform" method="post" class="calculateform" name="calculate-fragility">
 						<div class="row">
 							<div class="col-lg-12 field">
 								<p><strong>Nome:</strong></p>
@@ -75,10 +73,14 @@
 								<div class="line"><input type="radio" name="Q1" id="C23a_nr" value="0" onclick="refresh_c23a()"/> Não respondeu</div>
 								<hr>
 							</div>
-							<span id="opt"></span>
+							<div class="col-lg-12 field">
+								<p><strong>Q1a. </strong>Se sim, quantos quilos aproximadamente?</p>
+								<input type="float" name="Q1a" id="C23b"/>
+								<hr>
+							</div>
 							<div class="col-lg-12 field">
 								<p><strong>Q2. </strong>
-	O(a) Sr(a) acha que faz menos atividades físicas do que há 12 meses atrás (há um ano)?</p>
+									O(a) Sr(a) acha que faz menos atividades físicas do que há 12 meses atrás (há um ano)?</p>
 								<div class="line"><input type="radio" name="Q2" id="C29_s" value="1"/> Sim</div>
 								<div class="line"><input type="radio" name="Q2" id="C29_n" value="0"/> Não</div>
 								<div class="line"><input type="radio" name="Q2" id="C29_ns" value="0"/> Não sabe</div>
@@ -119,7 +121,8 @@
 							</div>
 							<div class="col-lg-12 margintop10 field">
 								<p>
-									<href class="btn btn-theme margintop10 pull-left" data-toggle="modal" data-target="#Resultados" onclick="formValidation()">Calcular Fragilidade</href>
+									<a class="btn btn-theme" data-toggle="modal" data-target="#Resultados" onclick="formValidation()">Calcular Fragilidade</a>
+									<a class="btn btn-danger" onclick="refresh()">Limpar</a>
 									<span class="pull-right margintop20">* Por favor, preencha todos os campos!</span>
 								</p>
 							</div>
@@ -127,7 +130,6 @@
 					</form>
 				</div>
 			</div>
-		</div>
 	</section>
 	<footer>
 		<div id="sub-footer">
@@ -164,6 +166,7 @@
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script src="js/fragility.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>

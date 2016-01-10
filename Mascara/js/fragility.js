@@ -1,17 +1,12 @@
-function validate_c23a() {
-    document.getElementById("opt").innerHTML = '<div class="col-lg-12 field">\r\n' +
-        '<p><strong>Q1a. </strong>Quantos quilos aproximadamente?</p>\r\n' +
-        '<input type="float" name="Q1a" id="C23b" value="" required/>\r\n' +
-        '<hr>\r\n' +
-        '</div>\r\n';
-}
-
 function refresh_c23a() {
     document.getElementById("opt").innerHTML = '';
 }
 
 function refresh() {
-
+    document.getElementById('fragilityform').reset();
+    document.getElementById('warning').innerHTML = '';
+    document.getElementById('identification').innerHTML = '';
+    document.getElementById('result').innerHTML = '';
 }
 
 function validateRadio(quest) {
@@ -39,13 +34,12 @@ function formValidation() {
     error += Number(validateRadio(Q6));
 
     if(nome.value == '' || nome.value == ' ')
-        document.getElementById('warning').innerHTML = '<h4>Por favor preencha o nome.</h4>';
-    else if(Q1[0].checked && document.getElementById("C23b").value == ""){
-        document.getElementById('warning').innerHTML = '<h4>Por favor preencha o campo Q1a.</h4>';
-        exit();
+        document.getElementById('warning').innerHTML = '<div class="alert-danger"><strong>Por favor preencha o nome.</strong></div>';
+    else if(Q1[0].checked && document.getElementById('C23b').value == ''){
+        document.getElementById('warning').innerHTML = '<div class="alert-danger"><strong>Por favor preencha o campo Q1a.</stro></div>';
     }
     else if(error < 6)
-        document.getElementById('warning').innerHTML = '<h4>Por favor preencha todos os campos!</h4>';
+        document.getElementById('warning').innerHTML = '<div class="alert-danger"><strong>Por favor preencha todos os campos!</stro></div>';
     else {
         fragilityCalculator();
     }
@@ -62,6 +56,7 @@ function fragilityCalculator() {
     var Q5 = document.getElementsByName('Q5');
     var Q6 = document.getElementsByName('Q6');
 
+    document.getElementById('warning').innerHTML = '';
     document.getElementById('identification').innerHTML = '<h4>Nome: </h4><p id="result_nome"></p>\r\n' +
         '<h4>CPF: </h4><p id="result_cpf"></p>\r\n' +
         '<hr>';
